@@ -1,0 +1,39 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block contenido %}
+
+<header class="masthead">
+    <div class="container position-relative">
+        <h1 class="text-center" style="color: white;">Agregar alumno</h1>
+    </div>
+</header>       
+
+<br>
+
+<form action="alta_alumno" method="POST">
+
+    {% csrf_token %}
+
+    <p>Nombre</p>
+    <input type="text" name="nombre" required>
+
+    <p>apellido</p>
+    <input type="text" name="apellido" required>
+
+    <p>curso</p>
+    <input type="text" name="curso" required>
+    <button>Enviar</button>
+    
+</form>
+
+
+
+
+
+
+
+
+
+{% endblock %}

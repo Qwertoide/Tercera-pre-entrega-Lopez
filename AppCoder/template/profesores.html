@@ -1,0 +1,91 @@
+{% extends "padre.html" %}
+{% load static %}
+
+{% block contenido %}
+
+<main>
+    
+    
+    <!-- Masthead-->
+    <header class="masthead">
+        <div class="container position-relative">
+            <h1 class="text-center" style="color: white;">Profesores</h1>
+        </div>
+    </header>   
+    
+    <br>
+    <br>
+
+    <div class="container">
+        <div class="row">
+            
+
+            <div class="col-12 col-md-6">
+                <div class="card" style="width: 501px;">
+                    <img src="{% static 'AppCoder/assets/img/testimonials-7.jpg' %}" width="500" height="500"/>                    
+                    <div class="card-body">
+                        <h5 class="card-title">Carlos Gimenez</h5>
+                        <p class="card-text">Lic. en sistemas</p>
+
+                    </div>
+                </div>
+
+            
+            </div>
+            
+
+            <div class="col-12 col-md-6">
+                <div class="card" style="width: 501px;">
+                <img src="{% static 'AppCoder/assets/img/testimonials-6.jpg' %}" width="500" height="500"/>
+                    <div class="card-body">
+                    <h5 class="card-title">Paula Rodriguez</h5>
+                    <p class="card-text">Ing. en sistemas</p>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <br></br>
+        <div class="row">
+
+            
+            <div class="col-12 col-md-6">
+                <div class="card" style="width: 501px;">
+                <img src="{% static 'AppCoder/assets/img/testimonials-5.jpg' %}" width="500" height="500"/>
+                    <div class="card-body">
+                    <h5 class="card-title">Sofia Fernandez</h5>
+                    <p class="card-text">Prof. Ingles</p>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-12 col-md-6">
+                <div class="card" style="width: 501px;">
+                <img src="{% static 'AppCoder/assets/img/testimonials-4.jpg' %}" width="500" height="500"/>
+                    <div class="card-body">
+                    <h5 class="card-title">Marcos Taborda</h5>
+                    <p class="card-text">Lic. en sistemas</p>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <br>
+    
+    <nav class="navbar navbar-light bg-light static-top">
+        <div class="container">
+            <a class="btn btn-primary" href="{% url 'buscar_profesor' %}">Buscar profesor</a>
+            <a class="btn btn-primary" href="{% url 'alta_profesor' %}">Agregar profesor</a>
+        </div>
+    </nav>
+
+</main>
+
+
+{% endblock %}

@@ -1,0 +1,28 @@
+
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block contenido %}
+
+
+    <header class="masthead">
+        <div class="container position-relative">
+            <h1 class="text-center" style="color: white;">Buscar alumno</h1>
+        </div>
+    </header>   
+
+
+    <br>
+
+    <h2>Buscar alumno</h2>
+    <form action="buscarAlumno" method="GET">
+        <p>Apellido</p>
+        <input type="text" name="apellido" id="apellido">
+        <button>Buscar</button>
+    </form>
+
+
+
+
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block contenido %}
+
+    <header class="masthead">
+        <div class="container position-relative">
+            <h1 class="text-center" style="color: white;">Alumnos</h1>
+        </div>
+    </header>   
+
+    <br>
+    <br>
+    
+    {% if alumnos %}
+        <ul>
+        {% for alumno in alumnos %}
+                <li>Nombre: {{alumno.nombre}}</li>
+                <li>Apellido: {{alumno.apellido}}</li>
+                <li>Curso: {{alumno.curso}}</li>
+
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No se encontro el alumno</p>
+    {% endif %}
+
+{% endblock %}

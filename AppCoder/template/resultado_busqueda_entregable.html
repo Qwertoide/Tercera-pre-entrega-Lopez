@@ -1,0 +1,29 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block contenido %}
+
+    <header class="masthead">
+        <div class="container position-relative">
+            <h1 class="text-center" style="color: white;">Entregables</h1>
+        </div>
+    </header>   
+    
+    <br>
+    <br>
+    
+    {% if entregables %}
+        <ul>
+        {% for entregable in entregables %}
+                <li>Nombre: {{entregable.nombre}}</li>
+                <li>Fecha de entrega: {{entregable.fecha_de_entrega}}</li>
+
+
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No se encontro el entregable</p>
+    {% endif %}
+
+{% endblock %}

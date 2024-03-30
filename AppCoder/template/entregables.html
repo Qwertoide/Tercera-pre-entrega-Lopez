@@ -1,0 +1,24 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+
+{% block contenido %}
+
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container position-relative">
+                <h1 class="text-center" style="color: white;">Entregables</h1>
+            </div>
+        </header>   
+        
+    <nav class="navbar navbar-light bg-light static-top">   
+        
+        <div class="container">
+            <a class="btn btn-primary" href="{% url 'buscar_entregable' %}">Buscar entregable</a>
+            <a class="btn btn-primary" href="{% url 'alta_entregable' %}">Agregar entregable</a>
+        </div>
+    
+    </nav>
+
+{% endblock %}

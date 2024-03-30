@@ -1,0 +1,123 @@
+{% extends "padre.html" %}
+{% load static %}
+
+{% block contenido %}
+
+<main>
+
+    <header class="masthead">
+        <div class="container position-relative">
+            <h1 class="text-center" style="color: white;">Alumnos</h1>
+        </div>
+    </header>   
+
+    
+    <br>
+    <h1 class="text-xl-center title">Graduados</h1>
+    <br>
+    
+
+    <div class="container">
+        <div class="row">
+            
+
+            <div class="col-12 col-md-6">
+                <div class="card" style="width: 501px;">
+                    <img src="{% static 'AppCoder/assets/img/testimonials-3.jpg' %}" width="500" height="500"/>                    
+                    <div class="card-body">
+                        <h5 class="card-title">Sara Perez</h5>
+                        <p class="card-text">Muy buen curso</p>
+
+                    </div>
+                </div>
+
+            
+            </div>
+            
+
+            <div class="col-12 col-md-6">
+                <div class="card" style="width: 501px;">
+                <img src="{% static 'AppCoder/assets/img/testimonials-2.jpg' %}" width="500" height="500"/>
+                    <div class="card-body">
+                    <h5 class="card-title">Juan Ramirez</h5>
+                    <p class="card-text">Muy recomendable</p>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <br></br>
+        <div class="row">
+
+            
+            <div class="col-12 col-md-6">
+                <div class="card" style="width: 501px;">
+                <img src="{% static 'AppCoder/assets/img/testimonials-0.jpg' %}" width="500" height="500"/>
+                    <div class="card-body">
+                    <h5 class="card-title">Roberto Giovanelli</h5>
+                    <p class="card-text">Buenos profes, super carismaticos y profesionales</p>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-12 col-md-6">
+                <div class="card" style="width: 501px;">
+                <img src="{% static 'AppCoder/assets/img/testimonials-1.jpg' %}" width="500" height="500"/>
+                    <div class="card-body">
+                    <h5 class="card-title">Marta Diaz</h5>
+                    <p class="card-text">Buen curso, completo pero no demasiado largo</p>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <br>
+    <br>
+    
+    <nav class="navbar navbar-light bg-light static-top">
+        <div class="container">
+            <a class="btn btn-primary" href="{% url 'buscar_alumno' %}">Buscar alumno</a>
+            <a class="btn btn-primary" href="{% url 'alta_alumno' %}">Agregar alumno</a>
+        </div>
+    </nav>
+
+    <br>
+
+    <main class="container">
+        
+        <h1 class="text-xl-center title"> Alumnos actuales </h1>
+        <br>
+
+        <table class="table">
+            <thead>
+                
+                <tr>
+                    <th>id</th>
+                    <th>nombre</th>
+                    <th>apellido</th>
+                    <th>curso</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for n in alumnos %}
+                <tr>
+                    <th>{{n.id}}</th>
+                    <td>{{n.nombre}}</td>
+                    <td>{{n.apellido}}</td>
+                    <td>{{n.curso}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </main>
+
+</main>
+
+
+{% endblock %}

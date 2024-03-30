@@ -1,0 +1,35 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block contenido %}
+
+
+
+    <header class="masthead">
+        <div class="container position-relative">
+            <h1 class="text-center" style="color: white;">Agregar entregables</h1>
+        </div>
+    </header>   
+
+    <br>
+
+    <form action="alta_entregable" method="POST">
+        {% csrf_token %}
+        <p>Nombre</p>
+        <input type="text" name="nombre" required>
+        <p>Fecha de entrega</p>
+        <input type="number" name="fecha_de_entrega" required>
+
+        <button>Enviar</button>
+    </form>
+
+
+
+
+
+
+
+
+
+{% endblock %}
